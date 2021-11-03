@@ -1,0 +1,11 @@
+##By using feature group.
+can_map = folium.Map(location=[40.78, -73.97],zoom_start=4,tiles='Stamen Toner')
+
+NY = folium.FeatureGroup()
+
+NY.add_child(folium.features.CircleMarker([40.78, -73.97],radius=5,color='red', fill_color='Red'))
+
+can_map.add_child(NY)
+
+folium.Marker([40.78, -73.97],popup='NY').add_to(can_map)
+can_map
